@@ -15,8 +15,35 @@ cv2.imshow("gimg",grey_image)
 cv2.waitKey(0) 
 cv2.destroyAllWindows()
 ````
-output:
+**output:
+
 ![image](https://user-images.githubusercontent.com/72507759/105328425-08a44d80-5bf6-11eb-8b15-86d88428d0ba.png)
+
+**program 2:Develop a program to perform linear transformation on image.**
+
+Linear Transformation is type of gray level transformation that is used for image enhancement. It is a spatial domain method. It is used for manipulation of an image so that the result is more suitable than the original for a specific application.
+
+Image scaling is a computer graphics process that increases or decreases the size of a digital image. An image can be scaled explicitly with an image viewer or editing software, or it can be done automatically by a program to fit an image into a differently sized area.
+
+Image rotation is a common image processing routine with applications in matching, alignment, and other image-based algorithms. The input to an image rotation routine is an image, the rotation angle θ, and a point about which rotation is done.
+
+
+``paython
+Scaling: 
+
+import cv2
+image= cv2.imread('panda.jpg')
+cv2.imshow('Original', image)
+cv2.waitKey(0)
+scale_percent = 500
+width = int(image.shape[1] * scale_percent / 100)
+height = int(image.shape[0] * scale_percent / 100)
+dsize = (width, height)
+output = cv2.resize(image, dsize)
+cv2.imshow('Original',output) 
+cv2.waitKey(0)
+
+**output
 
 
 
