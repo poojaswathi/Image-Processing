@@ -56,6 +56,35 @@ cv2.waitKey(0)
 **ROTATION:
 
 ```paython
+import cv2
+image=cv2.imread('panda.jpg')
+cv2.imshow('original',image)
+cv2.waitKey(0)
+src=cv2.rotate(image,cv2.ROTATE_90_CLOCKWISE)
+cv2.imshow('rotation',src)
+cv2.waitKey(0)
+```
+
+
+**OUTPUT
+
+![image](https://user-images.githubusercontent.com/72507759/105331748-d268cd00-5bf9-11eb-9d35-181fb601addc.png)
+
+
+**Horizontal
+
+```paython
+import cv2
+src = cv2.imread('panda.jpg', cv2.IMREAD_UNCHANGED)
+new_width = 600
+dsize = ( src.shape[0],new_width)
+output = cv2.resize(src, dsize, interpolation = cv2.INTER_AREA)
+cv2.imwrite('pooja.jpg',output)
+cv2.imshow('original',output)
+cv2.waitKey(0)
+```
+
+**OUTPUT
 
 
 **program 3:
