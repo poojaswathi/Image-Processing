@@ -124,6 +124,32 @@ cv2.waitKey(0)
 ![image](https://user-images.githubusercontent.com/72507759/105334198-9a16be00-5bfc-11eb-9ddd-306a978998cb.png)
 
 
+**Program4:
+Develop the program to convert color image to gray image and binary image.**
+**Gray Image:**
+  Grayscale is a range of monochromatic shades from black to white. Therefore, a grayscale image contains only shades of gray and no color.
+Many image editing programs allow you to convert a color image to black and white, or grayscale. This process removes all color information, leaving only the luminance of each pixel. Since digital images are displayed using a combination of red, green, and blue (RGB) colors, each pixel has three separate luminance values. Therefore, these three values must be combined into a single value when removing color from an image.
+
+**Binary Image:**
+   A binary image is the type of image where each pixel is black or white.Binary images are images whose pixels have only two possible intensity values they normally displayed as black and white ,numerically the two values are often 0 for black and either 1 or 255 for  white.binary image  are often produced by thresholding a grayscale or color image in order to separate  an object in the image from background.
+ cv2.threshold():. For every pixel, the same threshold value is applied. If the pixel value is smaller than the threshold, it is set to 0, otherwise it is set to a maximum value. The function cv.threshold is used to apply the thresholding. The first argument is the source image, which should be a grayscale image. The second argument is the threshold value which is used to classify the pixel values. The third argument is the maximum value which is assigned to pixel values exceeding the threshold . 
+   
+   
+  ```python
+import cv2 as c
+img=c.imread('i1.jpg')
+c.imshow('colour image',img)
+c.waitKey(0)
+gray=c.imread('i1.jpg',0)
+c.imshow('Result',gray)
+c.waitKey(0)
+ret,img1=c.threshold(gray,128,255,c.THRESH_BINARY)
+c.imshow('image',img1)
+c.waitKey(0)
+c.destroyAllWindows()
+```
+**output:**
+
 
 
 
