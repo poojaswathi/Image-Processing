@@ -223,27 +223,221 @@ c.waitKey(0)
 ![image](https://user-images.githubusercontent.com/72507759/105337847-e106b280-5c00-11eb-85ee-7ef87b0f74c2.png)
 
 
-
-**program 1: Coverting image to gray scale and gray scale to binary image**
-description:
-
-
+***program7: program to  display the neighbouhood elements of  matrix:***
 ```python
-import cv2
-image1=cv2.imread('panda.jpg')
-cv2.imshow('original',image1)
-cv2.waitKey(0)
-image=cv2.imread('panda.jpg',0)
-cv2.imshow('gray1',image)
-cv2.waitKey(0)
-ret,bimg=cv2.threshold(image,17,56,cv2.THRESH_BINARY)
-cv2.imshow('binary',bimg)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+import numpy as np
+i=0
+j=0
+a= np.array([[1,2,3,4,5], [2,3,4,5,6],[3,4,5,6,7],[4,5,6,7,8],[5,6,7,8,9]])
+print("a :\n",str(a))
+def neighbors(radius, rowNumber, columnNumber):
+     return [[a[i][j] if  i >= 0 and i < len(a) and j >= 0 and j < len(a[0]) else 0
+                for j in range(columnNumber-1-radius, columnNumber+radius)]
+                    for i in range(rowNumber-1-radius, rowNumber+radius)]
+neighbors(1, 2, 3)
 ```
-output:
+ ......
+ **output:**
+  a :
+ [[1 2 3 4 5]
+ [2 3 4 5 6]
+ [3 4 5 6 7]
+ [4 5 6 7 8]
+ [5 6 7 8 9]]
+[[2, 3, 4], [3, 4, 5], [4, 5, 6]
 
-![image](https://user-images.githubusercontent.com/72507759/105326836-338da200-5bf4-11eb-890c-b53c290a0907.png)
+
+ ***Program 8:Program to find the sum  of neighbour values in  a matrix:***
+ ```python
+import numpy as np
+
+M = [[1,2,3,4,5], [2,3,4,5,6],[3,4,5,6,7],[4,5,6,7,8],[5,6,7,8,9]]
+
+M = np.asarray(M)
+N = np.zeros(M.shape)
+
+def sumNeighbors(M,x,y):
+    l = []
+    for i in range(max(0,x-1),x+2): 
+        for j in range(max(0,y-1),y+2):
+            try:
+                t = M[i][j]
+                l.append(t)
+            except IndexError: 
+                pass
+    return sum(l)-M[x][y]
+
+for i in range(M.shape[0]):
+    for j in range(M.shape[1]):
+        N[i][j] = sumNeighbors(M, i, j)
+
+print ("Original matrix:\n", M)
+print ("Summed neighbors matrix:\n", N) 
+```
+....
+**output:**
+ Original matrix:
+ [[1 2 3 4 5]
+ [2 3 4 5 6]
+ [3 4 5 6 7]
+ [4 5 6 7 8]
+ [5 6 7 8 9]]
+Summed neighbors matrix:
+ [[ 7. 13. 18. 23. 15.]
+ [13. 24. 32. 40. 27.]
+ [18. 32. 40. 48. 32.]
+ [23. 40. 48. 56. 37.]
+ [15. 27. 32. 37. 23.]]
+ ...........
+ 
+ 
+ **program 9:
+ program to overload the operators:**
+ 
+```c++
+#include <iostream>
+using namespace std;
+class matrix
+{
+ int r1, c1, i, j, a1;
+ int a[10][10];
+
+public:int get()
+ {
+  cout << "Enter the row and column size for the  matrix\n";
+  cin >> r1;
+  cin >> c1;
+   cout << "Enter the elements of the matrix\n";
+  for (i = 0; i < r1; i++)
+  {
+   for (j = 0; j < c1; j++)
+   {
+    cin>>a[i][j];
+
+   }
+  }
+ 
+ 
+ };
+ void operator+(matrix a1)
+ {
+ int c[i][j];
+  
+   for (i = 0; i < r1; i++)
+   {
+    for (j = 0; j < c1; j++)
+    {
+     c[i][j] = a[i][j] + a1.a[i][j];
+    }
+   
+  }
+  cout<<"addition is\n";
+  for(i=0;i<r1;i++)
+  {
+   cout<<" ";
+   for (j = 0; j < c1; j++)
+   {
+    cout<<c[i][j]<<"\t";
+   }
+   cout<<"\n";
+  }
+
+ };
+
+  void operator-(matrix a2)
+ {
+ int c[i][j];
+  
+   for (i = 0; i < r1; i++)
+   {
+    for (j = 0; j < c1; j++)
+    {
+     c[i][j] = a[i][j] - a2.a[i][j];
+    }
+   
+  }
+  cout<<"subtraction is\n";
+  for(i=0;i<r1;i++)
+  {
+   cout<<" ";
+   for (j = 0; j < c1; j++)
+   {
+    cout<<c[i][j]<<"\t";
+   }
+   cout<<"\n";
+  }
+ };
+
+ void operator*(matrix a3)
+ {
+  int c[i][j];
+
+  for (i = 0; i < r1; i++)
+  {
+   for (j = 0; j < c1; j++)
+   {
+    c[i][j] =0;
+    for (int k = 0; k < r1; k++)
+    {
+     c[i][j] += a[i][k] * (a3.a[k][j]);
+    }
+  }
+  }
+  cout << "multiplication is\n";
+  for (i = 0; i < r1; i++)
+  {
+   cout << " ";
+   for (j = 0; j < c1; j++)
+   {
+    cout << c[i][j] << "\t";
+   }
+   cout << "\n";
+  }
+ };
+
+};
+
+int main()
+{
+ matrix p,q;
+ p.get();
+ q.get();
+ p + q;
+ p - q;
+ p * q;
+return 0;
+}
+```
+ **output:**
+ 
+ Enter the row and column size for the  matrix
+2
+2
+Enter the elements of the matrix
+7
+5
+6
+9
+Enter the row and column size for the  matrix
+2
+2
+Enter the elements of the matrix
+4
+5
+6
+1
+addition is
+ 11	10	
+ 12	10	
+subtraction is
+ 3	0	
+ 0	8	
+multiplication is
+ 58	40	
+ 78	39	
+ 
+
+
 
 
 
