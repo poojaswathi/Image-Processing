@@ -6,7 +6,7 @@ In digital photography, computer-generated imagery, and colorimetry, a grayscale
 
 To convert an image to grayscale in any of the Microsoft Office suite apps, right-click it and select Format Picture from the context menu . This will open an image editing panel on the right. Go to the Picture tab (the very last one). Expand the Picture Color options, and click the little dropdown next to the Presets for Color Saturation.
 
-```paython
+```python
 import cv2 
 image=cv2.imread('original.jpg') 
 grey_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
@@ -34,7 +34,7 @@ Image rotation is a common image processing routine with applications in matchin
 
 **SCALING:** 
 
-```paython
+```python
 import cv2
 image= cv2.imread('panda.jpg')
 cv2.imshow('Original', image)
@@ -55,7 +55,7 @@ cv2.waitKey(0)
 
 **ROTATION:
 
-```paython
+```python
 import cv2
 image=cv2.imread('panda.jpg')
 cv2.imshow('original',image)
@@ -73,7 +73,7 @@ cv2.waitKey(0)
 
 **Horizontal
 
-```paython
+```python
 import cv2
 src = cv2.imread('panda.jpg', cv2.IMREAD_UNCHANGED)
 new_width = 600
@@ -85,6 +85,9 @@ cv2.waitKey(0)
 ```
 
 **OUTPUT
+
+![image](https://user-images.githubusercontent.com/72507759/105332276-70f52e00-5bfa-11eb-92f2-e97e93703043.png)
+
 
 
 **program 3:
