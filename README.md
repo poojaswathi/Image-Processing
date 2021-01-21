@@ -220,7 +220,7 @@ c.waitKey(0)
 ```
 **output:**
 
-
+![image](https://user-images.githubusercontent.com/72507759/105337847-e106b280-5c00-11eb-85ee-7ef87b0f74c2.png)
 
 
 
