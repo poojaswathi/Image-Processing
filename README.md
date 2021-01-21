@@ -191,6 +191,8 @@ c.destroyAllWindows()
 **output:**
 
 ![image](https://user-images.githubusercontent.com/72507759/105335793-7ce2ef00-5bfe-11eb-9920-1fcd0ae8d855.png)
+![image](https://user-images.githubusercontent.com/72507759/105336213-fb3f9100-5bfe-11eb-9a5d-0765fe0fcbb1.png)
+
 
 
 
