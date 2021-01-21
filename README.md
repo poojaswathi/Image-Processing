@@ -198,6 +198,29 @@ c.destroyAllWindows()
 ![image](https://user-images.githubusercontent.com/72507759/105336725-93d61100-5bff-11eb-929f-07f9181721ff.png)
 
 
+***Program6:
+Develop a program to create an image from 2D array (generate an array of random size).***
+ A image is an array or a matrix of squarepixe arranged in column and rows.
+ 2D arary means an array of arrays in this type of array the position of an data elements is refered by two indicies instead of one.
+ PIL: Python Imaging Library (abbreviated as PIL) (in newer versions known as Pillow) is a free and open-source additional library for the Python programming language that        adds support for opening, manipulating, and saving many different image file formats. 
+ The numpy.zeros() function returns a new array of given shape and type, with zeros.
+ cv2.waitKey(0) this metjod will display the output window infinetely until any key is pressed
+ ```python
+ #code
+import cv2 as c
+import numpy as np
+from PIL import Image
+array = np.zeros([100, 200, 3], dtype=np.uint8)
+array[:,:100] = [255, 130, 0] 
+array[:,100:] = [0, 0, 255]
+img = Image.fromarray(array)
+img.save('image1.png')
+img.show()
+c.waitKey(0)
+```
+**output:**
+
+
 
 
 
