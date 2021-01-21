@@ -150,6 +150,45 @@ c.destroyAllWindows()
 ```
 **output:**
 
+![image](https://user-images.githubusercontent.com/72507759/105335309-eadae680-5bfd-11eb-8732-0c7e5a08f131.png)
+
+
+
+***Program5:Develop the program to change the image to different color spaces.***
+**Color spaces in Opencv:***
+Color spaces are a way to represent the color channels present in the image that gives the image that particular hue. There are several different color spaces and each has its own significance.Some of the popular color spaces are RGB (Red, Green, Blue), CMYK (Cyan, Magenta, Yellow, Black), HSV (Hue, Saturation, Value).
+cv2.imread() this method loads an image from specified file.
+c.cvtColor(img,c.COLOR_BGR2HSV): used to convert BGR color space to HSV color spaces
+c.cvtColor(img,c.COLOR_BGR2RGB):used to convert BGR color space to RGB color spaces
+ c.cvtColor(img,c.COLOR_BGR2LUV):used to convert BGR color space to LUV color spaces
+ c.cvtColor(img,c.COLOR_BGR2Lab):used to convert BGR color space to Labcolor spaces
+ cv2.destroyAllWindows() If we have multiple window open and we donot need those to be open we can use this method to close those all
+cv2.waitKey(0) this metjod will display the output window infinetely until any key is pressed
+cv2.imshow() method is used to display an image in a window. The window automatically fits to the image size.
+
+
+```python
+#code
+
+import cv2 as c
+img=c.imread('Rose.jpg')
+c.imshow('Original',img)
+c.waitKey(0)
+nimg=c.cvtColor(img,c.COLOR_BGR2HSV)
+c.imshow('Result1',nimg)
+c.waitKey(0)
+nimg1=c.cvtColor(img,c.COLOR_BGR2RGB)
+c.imshow('Result2',nimg1)
+c.waitKey(0)
+nimg2=c.cvtColor(img,c.COLOR_BGR2LUV)
+c.imshow('Result3',nimg2)
+c.waitKey(0)
+nimg3=c.cvtColor(img,c.COLOR_BGR2Lab)
+c.imshow('Result4',nimg3)
+c.waitKey(0)
+c.destroyAllWindows()
+```
+**output:**
 
 
 
