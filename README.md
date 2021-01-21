@@ -31,7 +31,7 @@ Image scaling is a computer graphics process that increases or decreases the siz
 Image rotation is a common image processing routine with applications in matching, alignment, and other image-based algorithms. The input to an image rotation routine is an image, the rotation angle θ, and a point about which rotation is done.
 
 
-``paython
+```paython
 Scaling: 
 
 import cv2
@@ -45,8 +45,11 @@ dsize = (width, height)
 output = cv2.resize(image, dsize)
 cv2.imshow('Original',output) 
 cv2.waitKey(0)
+````
 
-**output
+*output
+
+![image](https://user-images.githubusercontent.com/72507759/105330541-6d60a780-5bf8-11eb-93f3-7d2826c72c65.png)
 
 
 
