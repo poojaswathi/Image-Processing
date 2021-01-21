@@ -190,6 +190,9 @@ c.destroyAllWindows()
 ```
 **output:**
 
+![image](https://user-images.githubusercontent.com/72507759/105335793-7ce2ef00-5bfe-11eb-9920-1fcd0ae8d855.png)
+
+
 
 
 **program 1: Coverting image to gray scale and gray scale to binary image**
