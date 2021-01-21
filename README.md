@@ -90,8 +90,37 @@ cv2.waitKey(0)
 
 
 
-**program 3:
-**
+**program 3:Develop a program to find the sum and mean of a set of images. 
+ a.Create ‘n’ number of images and read them from the directory and perform the operations.***
+**Mean:**
+   'mean' value gives the contribution of individual pixel intensity for the entire image & variance is normally used to find how each pixel varies from the neighbouring pixel (or centre pixel) and is used in classify into different regions
+
+The OS module in python provides functions for interacting with the operating system. OS, comes under Python’s standard utility modules. This module provides a portable way of using operating system dependent functionality. The *os* and *os.path* modules include many functions to interact with the file system.
+
+```python
+
+import cv2
+import os
+path = "D:/flower"
+imgs = []
+
+files = os.listdir(path)
+for file in files:
+    filepath=path+"\\"+file
+    imgs.append(cv2.imread(filepath))
+i=0
+im = []
+for im in imgs:
+  
+    im+=imgs[i]
+    i=i+1
+cv2.imshow("sum of four pictures",im)
+meanImg = im/len(files)
+cv2.imshow("mean of four pictures",meanImg)
+cv2.waitKey(0)
+```
+**OUTPUT
+
 
 
 
