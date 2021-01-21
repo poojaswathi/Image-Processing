@@ -1,6 +1,8 @@
 # Image-Processing
 **program 1: Coverting image to gray scale and gray scale to binary image**
 description:
+
+
 ```python
 import cv2
 image1=cv2.imread('panda.jpg')
