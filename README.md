@@ -152,6 +152,7 @@ c.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/72507759/105335309-eadae680-5bfd-11eb-8732-0c7e5a08f131.png)
 ![image](https://user-images.githubusercontent.com/72507759/105336003-bb78a980-5bfe-11eb-8524-837e33369364.png)
+![image](https://user-images.githubusercontent.com/72507759/105336003-bb78a980-5bfe-11eb-8524-837e33369364.png)
 
 
 ***Program5:Develop the program to change the image to different color spaces.***
