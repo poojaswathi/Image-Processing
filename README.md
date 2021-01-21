@@ -19,6 +19,9 @@ cv2.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/72507759/105328425-08a44d80-5bf6-11eb-8b15-86d88428d0ba.png)
 
+
+
+
 **program 2:Develop a program to perform linear transformation on image.**
 
 Linear Transformation is type of gray level transformation that is used for image enhancement. It is a spatial domain method. It is used for manipulation of an image so that the result is more suitable than the original for a specific application.
