@@ -441,6 +441,7 @@ multiplication is
   **program 9:
   Develop the program to read gray scale image and convert the gray image to nagative image:**
   
+  
   ````python
   import cv2
 import numpy as np
@@ -459,5 +460,10 @@ cv2.waitKey(0)
 `````
  
  **OUTPUT***
+ ![image](https://user-images.githubusercontent.com/72507759/107623118-ddee6780-6c7e-11eb-92f9-4fec338a60e5.png)
+ 
+ 
+ ***PROGRAM 10:
+ 
 
 
