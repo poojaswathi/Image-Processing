@@ -436,7 +436,13 @@ multiplication is
  58	40	
  78	39	
  
-
+ 
+ 
+  **program 9:
+  Develop the program to read gray scale image and convert the gray image to nagative image:**
+  
+  ````python
+  
 
 
 
